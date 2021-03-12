@@ -2,7 +2,6 @@
 #define COMPLEX_STACK_H
 
 #include "complex.hpp"
-huinya
 
 namespace numbers {
     class complex_stack {
