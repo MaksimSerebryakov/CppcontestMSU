@@ -1,13 +1,15 @@
 #ifndef COMPLEX_H
 #define COMPLEX_H
 
-#include <iostream>
-#include <cstdlib>
-#include <cstring>
-#include <cstdio>
-#include <cmath>
-#include <sstream>
-#include <iomanip>
+//#include <iostream> all of this libs aren't used here
+//#include <cstdlib>
+//#include <cstring>
+//#include <cstdio>
+//#include <cmath>
+//#include <sstream>
+//#include <iomanip>
+
+#include <string> //missing lib
 
 namespace numbers {
     class complex {
@@ -49,6 +51,13 @@ namespace numbers {
 
         friend complex operator-(const complex &lhs, const complex &rhs);
     };
+    complex operator*(const complex &lhs, const complex &rhs);
+
+    complex operator/(const complex &lhs, const complex &rhs);
+
+    complex operator+(const complex &lhs, const complex &rhs);
+
+    complex operator-(const complex &lhs, const complex &rhs);
 };
 
 #endif // COMPLEX_H

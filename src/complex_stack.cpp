@@ -56,3 +56,14 @@ complex_stack complex_stack::operator~() const{
 
     return new_stack;
 }
+
+complex_stack numbers::operator<<(const complex_stack &lhs, const complex &rhs) {
+    complex_stack new_stack(lhs.size() + 1);
+
+    for(size_t i = 0; i < lhs.size(); ++i) {
+        new_stack.number_[i] = lhs.number_[i];
+    }
+    new_stack.number_[new_stack.size_ - 1] = rhs;
+
+    return new_stack;
+}

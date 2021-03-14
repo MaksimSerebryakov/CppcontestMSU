@@ -1,4 +1,6 @@
+#include <cmath>
 #include "../inc/integral.hpp"
+#include "../inc/polish_notation.hpp"
 
 numbers::complex integral(const std::vector<std::string> &func, const numbers::complex &center, double r, long n) {
     numbers::complex zPrev = center + r * numbers::complex(1, 0);
