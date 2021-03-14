@@ -1,10 +1,11 @@
 #ifndef POLISH_NOTATION_H
 #define POLISH_NOTATION_H
 
-#include <map>
+//#include <map> not used here
+//#include "../inc/complex_stack.hpp"
+
 #include <vector>
 #include "../inc/complex.hpp"
-#include "../inc/complex_stack.hpp"
 
 namespace numbers{
     complex eval(const std::vector<std::string> &args, const complex &z);

@@ -1,3 +1,12 @@
+//#include <iostream> not used
+//#include <cstdlib>
+//#include <cstring>
+//#include <cstdio>
+
+#include <cmath>
+#include <sstream>
+#include <iomanip>
+
 #include "../inc/complex.hpp"
 
 using namespace numbers;
@@ -63,23 +72,22 @@ complex& complex::operator/=(const complex &rhs) {
     return (*this);
 }
 
-complex operator*(const complex &lhs, const complex &rhs) {
+complex numbers::operator*(const complex &lhs, const complex &rhs) {
     complex out = lhs;
     out *= rhs;
     return out;
 }
-
-complex operator/(const complex &lhs, const complex &rhs) {
+complex numbers::operator/(const complex &lhs, const complex &rhs) {
     complex out = lhs;
     out /= rhs;
     return out;
 }
-complex operator+(const complex &lhs, const complex &rhs) {
+complex numbers::operator+(const complex &lhs, const complex &rhs) {
     complex out = lhs;
     out += rhs;
     return out;
 }
-complex operator-(const complex &lhs, const complex &rhs) {
+complex numbers::operator-(const complex &lhs, const complex &rhs) {
     complex out = lhs;
     out -= rhs;
     return out;

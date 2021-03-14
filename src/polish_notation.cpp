@@ -1,11 +1,14 @@
+#include <map>
+#include "../inc/complex_stack.hpp"
 #include "../inc/polish_notation.hpp"
 
 using namespace numbers;
 
-complex eval(const std::vector<std::string> &args, const complex &z) {
+complex numbers::eval(const std::vector<std::string> &args, const complex &z) {
     complex_stack notation;
     static std::map<std::string, void (*)(complex_stack &stack)> mp;
 
+    //move to mp initialization
     mp["+"] = [](complex_stack &stack) {complex num = +stack; stack = ~stack; num += +stack; 
         stack = ~stack; stack = stack << num;};
     mp["-"] = [](complex_stack &stack) {complex num = +stack; stack = ~stack; num = -num; 

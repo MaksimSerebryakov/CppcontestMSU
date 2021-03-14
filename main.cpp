@@ -1,9 +1,12 @@
+#include <vector> //don't assume that it's included in other include files
 #include <iostream>
 #include "inc/complex_stack.hpp"
 #include "inc/complex.hpp"
 #include "inc/integral.hpp"
-#include "inc/polish_notation.hpp"
 
+//#include "inc/polish_notation.hpp" not required here
+
+constexpr int BASE = 10;
 
 int main(int argc, char **argv) {
     if(argc < 2) {
